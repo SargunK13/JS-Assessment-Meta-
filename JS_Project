@@ -1,0 +1,50 @@
+//creating a variable myNFT of type array to hold the NFT'S
+const myNFT=[];
+
+//creating an object inside a function in which the values of the object are passed as parameters to the function
+function mintNFT (name, eyeColor, age, gender, bling, phoneNumber, country, occupation){
+const NFT={
+"Name":name,
+"Eye_color":eyeColor,
+"Age":age,
+"Gender":gender,
+"Bling":bling,
+"Phone_Number":phoneNumber,
+"Country":country,
+"Occupation":occupation
+}
+
+//assigning values to the array myNFT using the values from the object using push function
+myNFT.push(NFT);
+}
+
+//In listNFTs function, creating a loop to access and print the values of the array
+function listNFTs(){
+    for(let i=0; i<myNFT.length; i++)
+        {
+            console.log("ID:           "+ (i+1));
+            console.log("Name:         "+ myNFT[i].Name);
+            console.log("Eye color:    "+ myNFT[i].Eye_color);
+            console.log("Age:          "+ myNFT[i].Age);
+            console.log("Gender:       "+ myNFT[i].Gender);
+            console.log("Bling:        "+ myNFT[i].Bling);
+            console.log("Phone number: "+ myNFT[i].Phone_Number);
+            console.log("Country:      "+ myNFT[i].Country);
+            console.log("Occupation:   "+ myNFT[i].Occupation);
+            console.log("\n");
+        }
+}
+
+//printing the length of NFT supplies using the function getTotalSupply()
+function getTotalSupply(){
+    console.log(myNFT.length)
+}
+
+//calling the function by passing the desired values
+mintNFT("Sargun Kaur", "black", 19, "Female", "Gold Ring", 9877880326, "India", "Sudent");
+mintNFT("Gurvinder Singh", "black", 21, "Male", "Gold Chain", 8712456760, "India", "Student");
+mintNFT("Jasleen Kaur", "brown", 19, "Female", "Silver Anklets", 9123456760, "Canada", "Manager" );
+mintNFT("Jai Vishav ", "dark brown", 20, "Male", "None", 8566801760, "India", "Student");
+listNFTs();
+getTotalSupply();
+
