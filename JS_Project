@@ -19,8 +19,9 @@ myNFT.push(NFT);
 }
 
 //In listNFTs function, creating a loop to access and print the values of the array
+let n=myNFT.length;        //variable n stores the length of the array ie. number of elements present in the array
 function listNFTs(){
-    for(let i=0; i<myNFT.length; i++)
+    for(let i=0; i<n; i++)
         {
             console.log("ID:           "+ (i+1));
             console.log("Name:         "+ myNFT[i].Name);
@@ -37,7 +38,7 @@ function listNFTs(){
 
 //printing the length of NFT supplies using the function getTotalSupply()
 function getTotalSupply(){
-    console.log(myNFT.length)
+    console.log(n)
 }
 
 //calling the function by passing the desired values
